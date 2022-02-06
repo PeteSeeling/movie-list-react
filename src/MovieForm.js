@@ -9,7 +9,8 @@ export default function MovieForm({
   setmovieFormTitle,
   movieFormColor,
   setmovieFormColor,
-  submitMovie
+  addMovie
+  
 }){
   function handleSubmit(e) {
     e.preventDefault();
@@ -20,7 +21,8 @@ export default function MovieForm({
       director: movieFormDirector,
       color: movieFormColor,
     };
-    submitMovie(movie);
+    addMovie(movie);
+   
     setmovieFormColor('blue');
     setmovieFormTitle('');
     setmovieFormYear('');
