@@ -31,7 +31,7 @@ function App() {
   [filter, movies]);
 
   function addMovie(newestMovie) {
-    console.log(newestMovie);
+ 
     const updatedMoviesList = [...movies, newestMovie];
 
     setMovies(updatedMoviesList);
