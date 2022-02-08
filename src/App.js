@@ -8,6 +8,7 @@ import MovieForm from './MovieForm';
 
 
 function App() {
+
   
   const [movies, setMovies] = useState([]);
   const [filter, setFilter] = useState('');
@@ -22,19 +23,22 @@ function App() {
 
 
   useEffect(() =>{
+   
     const filteredMovies = movies.filter(movie => movie.title.includes(filter));
-
+ 
     setFilteredMovies(filteredMovies);
   },
   [filter, movies]);
 
   function addMovie(newestMovie) {
+    console.log(newestMovie);
     const updatedMoviesList = [...movies, newestMovie];
 
     setMovies(updatedMoviesList);
   }
 
   function deleteMovie(title) {
+   
     const index = movies.findIndex(movie => movie.title === title);
 
     movies.splice(index, 1);
@@ -44,6 +48,7 @@ function App() {
   }
 
   return (
+    
     <div className="App">
       <div className='current-movies-list'>
         <MovieForm
@@ -59,7 +64,7 @@ function App() {
     
         />
         {
-          
+            
           movieFormTitle && <MovieItem 
             title={movieFormTitle}
             year={movieFormYear}
@@ -75,6 +80,7 @@ function App() {
           ? filteredMovies
           : movies
       }
+      
       deleteMovie={deleteMovie}
       />
 
