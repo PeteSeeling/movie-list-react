@@ -7,7 +7,7 @@ export default function MovieItem({
 
   return <div 
     onClick={() => deleteMovie ? deleteMovie(title) : null }
-    className='movie-items' stlye={{ backgroundColor: color }}>
+    className='movie-items' stlye={{ background: color }}>
     <h2>Movie: {title}</h2>
     <div>Directed by:{director}</div>
     <div>Made in: {year}</div>

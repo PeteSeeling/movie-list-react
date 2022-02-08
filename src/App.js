@@ -23,7 +23,7 @@ function App() {
 
 
   useEffect(() =>{
-   
+  
     const filteredMovies = movies.filter(movie => movie.title.includes(filter));
  
     setFilteredMovies(filteredMovies);
@@ -38,7 +38,7 @@ function App() {
   }
 
   function deleteMovie(title) {
-   
+
     const index = movies.findIndex(movie => movie.title === title);
 
     movies.splice(index, 1);
@@ -69,6 +69,7 @@ function App() {
             title={movieFormTitle}
             year={movieFormYear}
             director={movieFormDirector}
+            color={movieFormColor}
             
           />
         }

@@ -31,13 +31,14 @@ export default function MovieForm({
 
   return <form onSubmit={handleSubmit}>
     <label>
-          Director
-      <input required value={movieFormDirector} onChange={e => setmovieFormDirector(e.target.value)} />
-    </label>
-    <label>
           Movie Title
       <input required value={movieFormTitle} onChange={e => setmovieFormTitle(e.target.value)} />
     </label>
+    <label>
+          Director
+      <input required value={movieFormDirector} onChange={e => setmovieFormDirector(e.target.value)} />
+    </label>
+  
     <label>
           Year Created
       <input required value={movieFormYear} onChange={e => setmovieFormYear(e.target.value)} />
